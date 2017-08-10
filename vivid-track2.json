@@ -1,0 +1,103 @@
+{ "art": {
+    "x": "",
+    "y": "",
+    "w": "100",
+    "h": "100"
+  },
+  "maintext": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "subtext": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "play": {
+    "show": "true",
+    "x": "10",
+    "y": "10",
+    "w": "31",
+    "h": "30"
+  },
+  "next": {
+    "x": "",
+    "y": "",
+    "w": "17",
+    "h": "11"
+  },
+  "prev": {
+    "x": "",
+    "y": "",
+    "w": "17",
+    "h": "11"
+  },
+  "currenttitle": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "currenttime": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "totaltime": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "linkarea": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "0",
+    "styles": {
+      "fontSize": "",
+      "textAlign": "left"
+    }
+  },
+  "timeline": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "16"
+  },
+  "tracklist": {
+    "x": "",
+    "y": "",
+    "w": "",
+    "h": "",
+    "styles": {
+      "fontSize": "",
+      "rowHeight": "",
+      "textAlign": "left"
+    }
+  }
+}

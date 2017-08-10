@@ -1,0 +1,249 @@
+/*@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+*/
+@font-face {
+    font-family: DINFontUltra;
+    src: url('fonts/DINNextLTPro-UltraLight2.otf');
+}
+@font-face {
+    font-family: DINFontItalic;
+    src: url('fonts/DINNextLTPro-LightItalic.ttf');
+}
+@font-face {
+    font-family: DINFontLight;
+    src: url('fonts/DINNextLTPro-Light.ttf');
+}
+
+body {
+    display: block;
+    margin: 0;
+    font-family: 'DINFontUltra', sans-serif;
+    background-color: black;
+}
+
+p {
+    margin: 0;
+}
+a:visited {
+  color: inherit;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  cursor: pointer;
+}
+
+.timetable-heading {
+    margin-top: 0.5em;
+    font-family: 'DINFontLight', sans-serif;
+}
+
+#container {
+  position: relative;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#bgimage div {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+/*  background-position: left bottom; */
+  height: 100%;
+  width: 100%;
+  min-height: 80vw;
+}
+
+#photocredit {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'DINFontItalic', sans-serif;
+  font-size: 0.75em;
+  color: white;
+}
+#photocredit a {
+  text-decoration: none;
+}
+
+.timetable-item {
+    text-decoration: none;
+}
+
+.floatingmenu {
+    position:relative; 
+    z-index:100;
+    font-family: 'DINFontUltra', sans-serif;
+    /*background-color:white; opacity: 0.6;*/
+    cursor: default;
+}
+.titleItem {
+    position: relative;
+    display: inline-block;
+}
+#contentContainer {
+  z-index:100;
+}
+#contentContainer h1 {
+  font-size: 1.5em;
+  margin: 2em 0 0;
+  font-weight: normal;
+}
+#contentContainer h2 {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#artContainer h1 {
+    text-transform: uppercase;
+}
+
+#lineupContainer h2 {
+    margin-bottom: 0;
+    margin-top: 0.2em;
+}
+
+#lineupContainer p {
+    margin-bottom: 1em;
+}
+
+#contentContainer p a span {
+  text-decoration: underline;
+}
+#contentContainer img {
+  margin-top: 2em;
+}
+.titleItem {
+    display: inline-block;
+}
+
+.titleItem span, .titleItem p {
+  font-size: 1em;
+}
+.titleItem span {
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  /*  text-decoration: underline; */
+}
+
+.titleItem a:link {
+  text-decoration: none;
+}
+.titleItem a:active {
+  text-decoration: underline;
+}
+
+.inline-block-center {
+  text-align: center;
+}
+.inline-block-center div {
+  display: inline-block;
+  text-align: left;
+}
+
+#bgimage div {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity:0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+#bgimage div.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
+
+.hashtag {
+  color: #AAAAAA;
+  font-size: 0.8em;
+}
+
+.credit-text {
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.socialmedia-links {
+   text-align: right;
+}
+.fb-link {
+    display: inline-block;
+    background-image: url('img/logos/fb-bw.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.bc-link {
+    display: inline-block;
+    background-image: url('img/logos/bc-bw.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+
+@media all and (min-width: 100px) {
+
+    .hidelarge {
+        display: inline-block;
+    }
+
+}
+
+@media all and (min-width: 700px) {
+
+    .hidelarge {
+        display: none;
+    }
+
+}
+
+@media all and (min-width: 300px) {
+
+    .floatingmenu {
+        width: 95%;
+        padding-top: 8vw;
+        max-width: 600px;
+    }
+    #contentContainer {
+          width: 95%;
+          max-width: 600px;
+    }
+    .floatingmenu, #contentContainer {
+        /*padding-left: 25%;*/
+        margin: 0 auto;
+    }
+
+    #contentContainer img {
+      max-width: 100%;
+    }
+
+}
+
+@media all and (min-width: 1200px) {
+
+    .floatingmenu {
+        width: 50%;
+        padding-top: 8vw;
+    }
+    #contentContainer {
+          width: 50%;
+    }
+    .floatingmenu, #contentContainer {
+        /*padding-left: 25%;*/
+        margin: auto;
+    }
+
+
+}
