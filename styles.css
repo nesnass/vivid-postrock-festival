@@ -105,7 +105,7 @@ a:hover {
 }
 
 #lineupContainer h2 {
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
     margin-top: 0.2em;
 }
 
@@ -183,6 +183,8 @@ a:hover {
 
 .socialmedia-links {
    text-align: right;
+   float: right;
+   min-height: 100%;
 }
 .fb-link {
     display: inline-block;
@@ -204,6 +206,10 @@ a:hover {
     background-size: cover;
     width: 40px;
     height: 40px;
+}
+
+.band-footer div {
+  display: inline-block;
 }
 
 
