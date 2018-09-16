@@ -207,6 +207,27 @@ a:hover {
     width: 40px;
     height: 40px;
 }
+.www-link {
+  display: inline-block;
+  background-image: url('img/logos/www-bw.png');
+  background-size: cover;
+  width: 39px;
+  height: 40px;
+}
+.youtube-link {
+  display: inline-block;
+  background-image: url('img/logos/youtube-bw.png');
+  background-size: cover;
+  width: 39px;
+  height: 40px;
+}
+.instagram-link {
+  display: inline-block;
+  background-image: url('img/logos/instagram-bw.png');
+  background-size: cover;
+  width: 39px;
+  height: 40px;
+}
 
 .band-footer div {
   display: inline-block;
@@ -234,11 +255,11 @@ a:hover {
     .floatingmenu {
         width: 95%;
         padding-top: 8vw;
-        max-width: 600px;
+        max-width: 650px;
     }
     #contentContainer {
           width: 95%;
-          max-width: 600px;
+          max-width: 650px;
     }
     .floatingmenu, #contentContainer {
         /*padding-left: 25%;*/
@@ -254,11 +275,11 @@ a:hover {
 @media all and (min-width: 1200px) {
 
     .floatingmenu {
-        width: 50%;
+        width: 65%;
         padding-top: 8vw;
     }
     #contentContainer {
-          width: 50%;
+          width: 65%;
     }
     .floatingmenu, #contentContainer {
         /*padding-left: 25%;*/

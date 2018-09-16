@@ -70,6 +70,13 @@ $(document).ready(function() {
     }
     //bgimage.css('background-image', 'url(' + images[0] + ')');
     loadContent("img/home1.jpg", '600px', page, "");
+    setTimeout(() => {
+      window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+      });
+    }, 500);
 });
 
 
@@ -103,6 +110,7 @@ function clearActive() {
     $('#volunteerLink').css('text-decoration', 'none');
     $('#practicalitiesLink').css('text-decoration', 'none');
     $('#ticketsLink').css('text-decoration', 'none');
+    $('#artLink').css('text-decoration', 'none');
 }
 
 function testplay() {
