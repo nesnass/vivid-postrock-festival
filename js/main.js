@@ -4,7 +4,7 @@ var timerId = null;
 var imageSelector = 0;
 var timerRunning = false;
 // var images = ['img/backgrunn_web1.jpg','img/backgrunn_web2.jpg'];
-var body, bgimage, container, includedContent, photocredit, sponsors;
+var body, bgimage, container, includedContent, photocredit, sponsors, floatingMenu;
 
 function loadContent(imageUrl, margin, page, activeId) {
     if (page === 'none')
@@ -16,6 +16,7 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.hide();
         photocredit.hide();
         container.css('color', '#000000');
+        floatingMenu.removeClass('floatingMenuRibbon');
     }
     else {
         sponsors.hide();
@@ -23,6 +24,7 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.show();
         photocredit.show();
         container.css('color', '#FFFFFF');
+        floatingMenu.addClass('floatingMenuRibbon');
         if(!timerRunning) {
             timerRunning = true;
             rotateCarousel();
@@ -60,6 +62,7 @@ $(document).ready(function() {
     sponsors = $('#sponsors');
     includedContent = $('#includedContent');
     photocredit = $('#photocredit');
+    floatingMenu = $('.floatingmenu')
 
     var page = getParameterByName('page');
 

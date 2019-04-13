@@ -51,7 +51,7 @@ a:hover {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-/*  background-position: left bottom; */
+  background-position: 50% 10%;
   height: 100%;
   width: 100%;
   min-height: 80vw;
@@ -76,10 +76,28 @@ a:hover {
 .floatingmenu {
     position:relative; 
     z-index:100;
-    font-family: 'DINFontUltra', sans-serif;
-    /*background-color:white; opacity: 0.6;*/
-    cursor: default;
+    margin-top: 8vw;
+    opacity: 0.7;
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
 }
+
+.floatingMenuRibbon {
+  background-color:#213661;
+  color: white;
+}
+
+.floatingMenuContent {
+  font-family: 'DINFontUltra', sans-serif;
+  font-weight: bold;
+  /*background-color:black; 
+  opacity: 0.6;*/
+  /*filter: drop-shadow(.05em .05em orange);
+  mix-blend-mode: difference;*/
+  cursor: default;
+}
+
 .titleItem {
     position: relative;
     display: inline-block;
@@ -207,6 +225,13 @@ a:hover {
     width: 40px;
     height: 40px;
 }
+.spotify-link {
+  display: inline-block;
+  background-image: url('img/logos/spotify-bw.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
 .www-link {
   display: inline-block;
   background-image: url('img/logos/www-bw.png');
@@ -252,16 +277,15 @@ a:hover {
 
 @media all and (min-width: 300px) {
 
-    .floatingmenu {
+    .floatingMenuContent {
         width: 95%;
-        padding-top: 8vw;
         max-width: 650px;
     }
     #contentContainer {
           width: 95%;
           max-width: 650px;
     }
-    .floatingmenu, #contentContainer {
+    .floatingMenuContent, #contentContainer {
         /*padding-left: 25%;*/
         margin: 0 auto;
     }
@@ -274,14 +298,13 @@ a:hover {
 
 @media all and (min-width: 1200px) {
 
-    .floatingmenu {
+    .floatingMenuContent {
         width: 65%;
-        padding-top: 8vw;
     }
     #contentContainer {
           width: 65%;
     }
-    .floatingmenu, #contentContainer {
+    .floatingMenuContent, #contentContainer {
         /*padding-left: 25%;*/
         margin: auto;
     }
