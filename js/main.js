@@ -1,3 +1,6 @@
+// Constants
+var totalBackgroundImages = 2; // Adjust this based on how many images are used
+
 // Internal variables
 var imageRoot = 'img/';
 var timerId = null;
@@ -97,13 +100,13 @@ function rotateCarousel() {
 
         $("#bgimage div").removeClass("opaque");
         $("#bgimage div").eq(imageSelector).addClass("opaque");
-        imageSelector == 2 ? imageSelector = 0 : imageSelector++;
+        imageSelector == (totalBackgroundImages - 1) ? imageSelector = 0 : imageSelector++;
 
 
         
 
         window.clearTimeout(timerId);
-        timerId = window.setTimeout(function(){rotateCarousel()}, 5000);
+        timerId = window.setTimeout(function(){rotateCarousel()}, 7000);
 }
 
 function clearActive() {
