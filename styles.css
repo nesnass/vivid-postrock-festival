@@ -32,7 +32,9 @@ a {
 a:hover {
   cursor: pointer;
 }
-
+a:-webkit-any-link {
+  text-decoration: none;
+}
 .timetable-heading {
     margin-top: 0.5em;
     font-family: 'DINFontLight', sans-serif;
@@ -74,7 +76,7 @@ a:hover {
 }
 
 .floatingmenu {
-    position:relative; 
+    position:relative;
     z-index:100;
     margin-top: 8vw;
     float: left;
@@ -91,7 +93,7 @@ a:hover {
 .floatingMenuContent {
   font-family: 'DINFontUltra', sans-serif;
   font-weight: bold;
-  /*background-color:black; 
+  /*background-color:black;
   opacity: 0.6;*/
   /*filter: drop-shadow(.05em .05em orange);
   mix-blend-mode: difference;*/
@@ -199,6 +201,10 @@ a:hover {
 .dayContainer span:first-child {
     font-size: 2.2em;
 }
+.dayContainer span:nth-child(3) {
+  font-size: 1em;
+  float: right;
+}
 .bandContainer {
   overflow: hidden;
   width: 100%;
@@ -207,6 +213,13 @@ a:hover {
    text-align: right;
    float: right;
    min-height: 100%;
+}
+.loc-link {
+  display: inline-block;
+  background-image: url('img/logos/location.png');
+  background-size: cover;
+  width: 1em;
+  height: 1em;
 }
 .fb-link {
     display: inline-block;
