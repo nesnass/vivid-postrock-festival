@@ -7,7 +7,7 @@ var timerId = null;
 var imageSelector = 0;
 var timerRunning = false;
 // var images = ['img/backgrunn_web1.jpg','img/backgrunn_web2.jpg'];
-var body, bgimage, container, includedContent, photocredit, sponsors, floatingMenu;
+var body, bgimage, container, includedContent, photocredit, sponsors, floatingMenu, highlighted;
 
 function loadContent(imageUrl, margin, page, activeId) {
     if (page === 'none')
@@ -19,6 +19,7 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.hide();
         photocredit.hide();
         container.css('color', '#000000');
+        highlighted.css('color', 'darkcyan');
         floatingMenu.removeClass('floatingMenuRibbon');
     }
     else {
@@ -27,6 +28,7 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.show();
         photocredit.show();
         container.css('color', '#FFFFFF');
+        highlighted.css('color', 'yellow');
         floatingMenu.addClass('floatingMenuRibbon');
         if(!timerRunning) {
             timerRunning = true;
@@ -66,6 +68,7 @@ $(document).ready(function() {
     includedContent = $('#includedContent');
     photocredit = $('#photocredit');
     floatingMenu = $('.floatingmenu');
+    highlighted = $('.highlighted')
 
     var page = getParameterByName('page');
 
