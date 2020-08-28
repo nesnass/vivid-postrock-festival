@@ -52,7 +52,7 @@ a:-webkit-any-link {
 #bgimage div {
   position: absolute;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain 100%;
   background-position: 50% 10%;
   height: 100%;
   width: 100%;
