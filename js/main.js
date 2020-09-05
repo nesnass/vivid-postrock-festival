@@ -1,10 +1,13 @@
+// Constants
+var totalBackgroundImages = 2; // Adjust this based on how many images are used
+
 // Internal variables
 var imageRoot = 'img/';
 var timerId = null;
 var imageSelector = 0;
 var timerRunning = false;
 // var images = ['img/backgrunn_web1.jpg','img/backgrunn_web2.jpg'];
-var body, bgimage, container, includedContent, photocredit, sponsors;
+var body, bgimage, container, includedContent, photocredit, sponsors, floatingMenu, highlighted;
 
 function loadContent(imageUrl, margin, page, activeId) {
     if (page === 'none')
@@ -16,6 +19,8 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.hide();
         photocredit.hide();
         container.css('color', '#000000');
+        highlighted.css('color', 'darkcyan');
+        floatingMenu.removeClass('floatingMenuRibbon');
     }
     else {
         sponsors.hide();
@@ -23,6 +28,8 @@ function loadContent(imageUrl, margin, page, activeId) {
         bgimage.show();
         photocredit.show();
         container.css('color', '#FFFFFF');
+        highlighted.css('color', 'yellow');
+        floatingMenu.addClass('floatingMenuRibbon');
         if(!timerRunning) {
             timerRunning = true;
             rotateCarousel();
@@ -60,10 +67,12 @@ $(document).ready(function() {
     sponsors = $('#sponsors');
     includedContent = $('#includedContent');
     photocredit = $('#photocredit');
+    floatingMenu = $('.floatingmenu');
+    highlighted = $('.highlighted')
 
     var page = getParameterByName('page');
 
-    if (page === 'art') {
+    if (page === 'vividART') {
         page = 'vividART.html';
     } else {
         page = 'home.html'
@@ -72,9 +81,9 @@ $(document).ready(function() {
     loadContent("img/home1.jpg", '600px', page, "");
     setTimeout(() => {
       window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
       });
     }, 500);
 });
@@ -84,7 +93,7 @@ function rotateCarousel() {
         if(!timerRunning)
             return;
 /*
-        bgimage.fadeTo('slow', 0, function() 
+        bgimage.fadeTo('slow', 0, function()
         {
             bgimage.css('background-image', 'url(' + images[imageSelector] + ')');
             imageSelector == 2 ? imageSelector = 0 : imageSelector++;
@@ -94,13 +103,13 @@ function rotateCarousel() {
 
         $("#bgimage div").removeClass("opaque");
         $("#bgimage div").eq(imageSelector).addClass("opaque");
-        imageSelector == 2 ? imageSelector = 0 : imageSelector++;
+        imageSelector == (totalBackgroundImages - 1) ? imageSelector = 0 : imageSelector++;
 
 
-        
+
 
         window.clearTimeout(timerId);
-        timerId = window.setTimeout(function(){rotateCarousel()}, 5000);
+        timerId = window.setTimeout(function(){rotateCarousel()}, 7000);
 }
 
 function clearActive() {

@@ -32,7 +32,9 @@ a {
 a:hover {
   cursor: pointer;
 }
-
+a:-webkit-any-link {
+  text-decoration: none;
+}
 .timetable-heading {
     margin-top: 0.5em;
     font-family: 'DINFontLight', sans-serif;
@@ -50,8 +52,8 @@ a:hover {
 #bgimage div {
   position: absolute;
   background-repeat: no-repeat;
-  background-size: cover;
-/*  background-position: left bottom; */
+  background-size: 100% 100%;
+  /* background-position: 50% 10%; */
   height: 100%;
   width: 100%;
   min-height: 80vw;
@@ -74,12 +76,30 @@ a:hover {
 }
 
 .floatingmenu {
-    position:relative; 
+    position:relative;
     z-index:100;
-    font-family: 'DINFontUltra', sans-serif;
-    /*background-color:white; opacity: 0.6;*/
-    cursor: default;
+    margin-top: 8vw;
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
 }
+
+.floatingMenuRibbon {
+  /*background-color:#213661;*/
+  background-color: rgba(36, 53, 100, 0.7);
+  color: rgba(255, 255, 255, 1);
+}
+
+.floatingMenuContent {
+  font-family: 'DINFontUltra', sans-serif;
+  font-weight: bold;
+  /*background-color:black;
+  opacity: 0.6;*/
+  /*filter: drop-shadow(.05em .05em orange);
+  mix-blend-mode: difference;*/
+  cursor: default;
+}
+
 .titleItem {
     position: relative;
     display: inline-block;
@@ -130,6 +150,7 @@ a:hover {
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
+    font-size: 0.9em;
   /*  text-decoration: underline; */
 }
 
@@ -180,11 +201,25 @@ a:hover {
 .dayContainer span:first-child {
     font-size: 2.2em;
 }
-
+.dayContainer span:nth-child(3) {
+  font-size: 1em;
+  float: right;
+}
+.bandContainer {
+  overflow: hidden;
+  width: 100%;
+}
 .socialmedia-links {
    text-align: right;
    float: right;
    min-height: 100%;
+}
+.loc-link {
+  display: inline-block;
+  background-image: url('img/logos/location.png');
+  background-size: cover;
+  width: 1em;
+  height: 1em;
 }
 .fb-link {
     display: inline-block;
@@ -206,6 +241,13 @@ a:hover {
     background-size: cover;
     width: 40px;
     height: 40px;
+}
+.spotify-link {
+  display: inline-block;
+  background-image: url('img/logos/spotify-bw.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 .www-link {
   display: inline-block;
@@ -252,16 +294,15 @@ a:hover {
 
 @media all and (min-width: 300px) {
 
-    .floatingmenu {
+    .floatingMenuContent {
         width: 95%;
-        padding-top: 8vw;
         max-width: 650px;
     }
     #contentContainer {
           width: 95%;
           max-width: 650px;
     }
-    .floatingmenu, #contentContainer {
+    .floatingMenuContent, #contentContainer {
         /*padding-left: 25%;*/
         margin: 0 auto;
     }
@@ -274,14 +315,13 @@ a:hover {
 
 @media all and (min-width: 1200px) {
 
-    .floatingmenu {
+    .floatingMenuContent {
         width: 65%;
-        padding-top: 8vw;
     }
     #contentContainer {
           width: 65%;
     }
-    .floatingmenu, #contentContainer {
+    .floatingMenuContent, #contentContainer {
         /*padding-left: 25%;*/
         margin: auto;
     }
